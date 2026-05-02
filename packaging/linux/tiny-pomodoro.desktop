@@ -7,4 +7,5 @@ Icon=tiny-pomodoro
 Terminal=false
 Categories=Utility;GTK;
 StartupNotify=true
+StartupWMClass=TinyPomodoro
 X-GNOME-UsesNotifications=true

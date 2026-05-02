@@ -1,3 +1,7 @@
+![CI](https://github.com/guarinogio/tiny-pomodoro-xfce/actions/workflows/ci.yml/badge.svg)
+![APT](https://img.shields.io/badge/apt-stable-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 # Tiny Pomodoro XFCE
 
 Tiny Pomodoro XFCE is a small floating Pomodoro and countdown timer for Xubuntu/XFCE.
