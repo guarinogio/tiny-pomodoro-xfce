@@ -29,7 +29,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y \
-            build-essential devscripts debhelper dh-python python3-all \
+            build-essential build-essential devscripts debhelper dh-python python3-all \
             pybuild-plugin-pyproject python3-setuptools \
             desktop-file-utils dpkg-dev apt-utils gnupg
 
