@@ -9,3 +9,11 @@ dist/
 .venv/
 .env
 .DS_Store
+.pybuild/
+debian/.debhelper/
+debian/debhelper-build-stamp
+debian/files
+debian/tiny-pomodoro-xfce/
+*.buildinfo
+*.changes
+*.deb

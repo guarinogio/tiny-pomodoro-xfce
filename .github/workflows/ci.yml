@@ -4,23 +4,33 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
-  smoke-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install system dependencies
+      - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y python3-gi gir1.2-gtk-3.0 gir1.2-pango-1.0 libnotify-bin pulseaudio-utils xfconf
+          sudo apt install -y \
+            python3-gi gir1.2-gtk-3.0 gir1.2-pango-1.0 \
+            libnotify-bin pulseaudio-utils xfconf \
+            python3-pytest
 
-      - name: Compile Python
+      - name: Compile
         run: |
           python3 -m py_compile tiny_pomodoro.py tiny_pomodoro/*.py
 
-      - name: Validate package metadata
+      - name: Run tests
         run: |
-          python3 -m pip install --upgrade pip build
+          python3 -m pytest -q
+
+      - name: Build Python package
+        run: |
+          python3 -m pip install --break-system-packages --upgrade build
           python3 -m build

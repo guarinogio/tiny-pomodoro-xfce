@@ -6,5 +6,5 @@ Exec=tiny-pomodoro
 Icon=tiny-pomodoro
 Terminal=false
 Categories=Utility;GTK;
-StartupNotify=false
+StartupNotify=true
 X-GNOME-UsesNotifications=true
