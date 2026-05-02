@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Tiny Pomodoro
+Comment=Small Pomodoro and countdown timer for XFCE
+Exec=tiny-pomodoro
+Icon=appointment-soon
+Terminal=false
+Categories=Utility;GTK;
+StartupNotify=false

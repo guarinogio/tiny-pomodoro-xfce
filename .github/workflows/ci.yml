@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y python3-gi gir1.2-gtk-3.0 gir1.2-pango-1.0 libnotify-bin pulseaudio-utils xfconf
+
+      - name: Compile Python
+        run: |
+          python3 -m py_compile tiny_pomodoro.py tiny_pomodoro/*.py
+
+      - name: Validate package metadata
+        run: |
+          python3 -m pip install --upgrade pip build
+          python3 -m build
