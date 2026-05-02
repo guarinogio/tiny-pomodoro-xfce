@@ -1,0 +1,17 @@
+5645354664f98c0d25cb686280ca10a0  usr/bin/tiny-pomodoro
+77bfd0a229151bd4e6681fd62c7480d8  usr/lib/python3/dist-packages/tiny_pomodoro/__init__.py
+edc4af2b4847665a8baf885f809dbed0  usr/lib/python3/dist-packages/tiny_pomodoro/app.py
+feab77022302f189621709db092230c2  usr/lib/python3/dist-packages/tiny_pomodoro/cli.py
+5456c6ad1457ce0be24fb210e7e96e05  usr/lib/python3/dist-packages/tiny_pomodoro/config.py
+34a10a2828ae773dd63cc162188196c9  usr/lib/python3/dist-packages/tiny_pomodoro/dialogs.py
+11f0b984d083df910d4fa29053c23ddb  usr/lib/python3/dist-packages/tiny_pomodoro/notifications.py
+f3c6016fa74a1d6185a904338fa0a137  usr/lib/python3/dist-packages/tiny_pomodoro/theme.py
+4b0c4259caee0a5a13d7e7e9ec4fe616  usr/lib/python3/dist-packages/tiny_pomodoro/window.py
+c72246579c4437c07cebb86fbcbc6d90  usr/lib/python3/dist-packages/tiny_pomodoro_xfce-0.2.0.dist-info/INSTALLER
+9cd7de04d0b1949e2649276d9e486c84  usr/lib/python3/dist-packages/tiny_pomodoro_xfce-0.2.0.dist-info/METADATA
+a227bf38fb17005b3bdb56ccc428b1bb  usr/lib/python3/dist-packages/tiny_pomodoro_xfce-0.2.0.dist-info/WHEEL
+e4c970c0ed64df9fdd04c3f5247eecc1  usr/lib/python3/dist-packages/tiny_pomodoro_xfce-0.2.0.dist-info/entry_points.txt
+9016397768eb6799436896dfd0333fc6  usr/lib/python3/dist-packages/tiny_pomodoro_xfce-0.2.0.dist-info/top_level.txt
+622c7b0a4b84a71c38d451c128b624f6  usr/share/applications/tiny-pomodoro.desktop
+ea1b0dc0cbb5797f607cfe3578357e40  usr/share/doc/tiny-pomodoro-xfce/changelog.gz
+d1605f84394b8d54c133309349fd48b7  usr/share/icons/hicolor/256x256/apps/tiny-pomodoro.png
