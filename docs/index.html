@@ -4,21 +4,100 @@
   <meta charset="utf-8">
   <title>Tiny Pomodoro XFCE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Small floating Pomodoro and countdown timer for Xubuntu/XFCE.">
   <style>
-    body { max-width: 760px; margin: 48px auto; font-family: system-ui, sans-serif; line-height: 1.5; padding: 0 20px; }
-    code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+    body {
+      max-width: 880px;
+      margin: 48px auto;
+      padding: 0 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f7f7f7;
+    }
+    h1, h2 { line-height: 1.2; }
+    .hero {
+      padding: 32px;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .badge {
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      font-size: 14px;
+    }
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 16px;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    a { color: #2563eb; }
+    footer {
+      margin-top: 48px;
+      color: #6b7280;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <h1>Tiny Pomodoro XFCE</h1>
-  <p>Small floating Pomodoro and countdown timer for Xubuntu/XFCE.</p>
+  <section class="hero">
+    <h1>Tiny Pomodoro XFCE</h1>
+    <p>Small floating Pomodoro and countdown timer for Xubuntu/XFCE.</p>
 
-  <h2>Install manually</h2>
-  <pre><code>git clone https://github.com/YOUR_USER/tiny-pomodoro-xfce.git
-cd tiny-pomodoro-xfce
-./install.sh</code></pre>
+    <p>
+      <span class="badge">GTK</span>
+      <span class="badge">XFCE</span>
+      <span class="badge">Xubuntu</span>
+      <span class="badge">Pomodoro</span>
+      <span class="badge">APT</span>
+    </p>
+  </section>
+
+  <h2>Install with APT</h2>
+
+  <pre><code>curl -fsSL https://guarinogio.github.io/tiny-pomodoro-xfce-apt/public.key \
+  | sudo gpg --dearmor --yes -o /usr/share/keyrings/tiny-pomodoro-xfce.gpg
+
+echo "deb [arch=all signed-by=/usr/share/keyrings/tiny-pomodoro-xfce.gpg] https://guarinogio.github.io/tiny-pomodoro-xfce-apt stable main" \
+  | sudo tee /etc/apt/sources.list.d/tiny-pomodoro-xfce.list
+
+sudo apt update
+sudo apt install tiny-pomodoro-xfce</code></pre>
 
   <h2>Run</h2>
+
   <pre><code>tiny-pomodoro</code></pre>
+
+  <h2>Features</h2>
+
+  <ul>
+    <li>Pomodoro and countdown timer modes</li>
+    <li>Small floating always-on-top window</li>
+    <li>System notifications and optional sound</li>
+    <li>XFCE dark mode detection</li>
+    <li>Timer shutdown option with cancellation</li>
+    <li>Installable Debian package and public APT repository</li>
+  </ul>
+
+  <h2>Links</h2>
+
+  <ul>
+    <li><a href="https://github.com/guarinogio/tiny-pomodoro-xfce">Project repository</a></li>
+    <li><a href="https://github.com/guarinogio/tiny-pomodoro-xfce-apt">APT repository</a></li>
+    <li><a href="https://github.com/guarinogio/tiny-pomodoro-xfce/releases">Releases</a></li>
+  </ul>
+
+  <footer>
+    Tiny Pomodoro XFCE is released under the MIT license.
+  </footer>
 </body>
 </html>
