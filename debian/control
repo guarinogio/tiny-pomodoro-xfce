@@ -24,7 +24,7 @@ Depends:
  libnotify-bin,
  pulseaudio-utils,
  xfconf
-Description: Small floating Pomodoro and countdown timer for XFCE
- Tiny Pomodoro XFCE is a small floating GTK timer for Xubuntu/XFCE.
+Description: Small floating Pomodoro and countdown timer for Linux X11
+ Tiny Pomodoro XFCE is a small floating GTK timer for Linux X11 desktops, including XFCE and GNOME on X11.
  It supports Pomodoro mode, countdown timer mode, notifications,
  dark mode, autostart, and optional shutdown scheduling.

@@ -5,23 +5,60 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk
 
 
-def system_is_dark():
+def _cmd_output(cmd):
     try:
-        theme = subprocess.check_output(
-            ["xfconf-query", "-c", "xsettings", "-p", "/Net/ThemeName"],
+        return subprocess.check_output(
+            cmd,
             text=True,
             stderr=subprocess.DEVNULL,
         ).strip().lower()
-        if "dark" in theme:
-            return True
     except Exception:
-        pass
+        return ""
 
+
+def gnome_is_dark():
+    color_scheme = _cmd_output([
+        "gsettings",
+        "get",
+        "org.gnome.desktop.interface",
+        "color-scheme",
+    ])
+
+    if "prefer-dark" in color_scheme:
+        return True
+
+    gtk_theme = _cmd_output([
+        "gsettings",
+        "get",
+        "org.gnome.desktop.interface",
+        "gtk-theme",
+    ])
+
+    return "dark" in gtk_theme
+
+
+def xfce_is_dark():
+    theme = _cmd_output([
+        "xfconf-query",
+        "-c",
+        "xsettings",
+        "-p",
+        "/Net/ThemeName",
+    ])
+
+    return "dark" in theme
+
+
+def gtk_prefers_dark():
     try:
         settings = Gtk.Settings.get_default()
         return bool(settings.get_property("gtk-application-prefer-dark-theme"))
     except Exception:
         return False
+
+
+def system_is_dark():
+    return gnome_is_dark() or xfce_is_dark() or gtk_prefers_dark()
 
 
 def is_dark(config):

@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 Name=Tiny Pomodoro
-Comment=Pomodoro and countdown timer for XFCE
+Comment=Pomodoro and countdown timer for Linux X11 desktops
 Exec=tiny-pomodoro
 Icon=tiny-pomodoro
 Terminal=false
 Categories=Utility;GTK;
 StartupNotify=true
-StartupWMClass=TinyPomodoro
 X-GNOME-UsesNotifications=true
+StartupWMClass=TinyPomodoro

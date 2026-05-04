@@ -4,7 +4,7 @@
 
 # Tiny Pomodoro XFCE
 
-Tiny Pomodoro XFCE is a small floating Pomodoro and countdown timer for Xubuntu/XFCE.
+Tiny Pomodoro XFCE is a small floating Pomodoro and countdown timer for Linux X11 desktops, including Xubuntu/XFCE and GNOME on X11.
 
 It is designed for people who want a lightweight, always-visible productivity timer with a clean GTK interface, system notifications, dark mode support, and an installable Debian package.
 
@@ -18,7 +18,7 @@ It is designed for people who want a lightweight, always-visible productivity ti
 - System notifications
 - Optional sound
 - Custom sound file
-- XFCE dark mode detection
+- XFCE and GNOME dark mode detection
 - Manual light/dark theme override
 - Smooth progress ring animation
 - Different ring colors by mode
